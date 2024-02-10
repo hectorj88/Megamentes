@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+/*
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    min-height: 20vh;
+    background-color: #fff;
+}
+/*
+.main{
+    background-image: url("../img/fondom.png");
+    background-size: cover;
+    background-attachment: fixed;
+}*/
+
+
+.main {
+    position: relative;
+}
+
+.main::before {
+    content: "";
+    background: url("../img/fondom.png");
+    background-size: fixed;
+    background-attachment: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.15;
+    z-index: -1;/* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+.menu{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: right;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #111111;
+    display: block;
+}
+
+#menu{
+    display: none;
+}
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.logo{
+    max-width: 20vh;
+}
+
+.quiensomos, .mision-vision, .mbp, .leo, .expreso{
+    margin-bottom: 10vh;
+}
+
+.somos img, h2{
+    /*display: inline-block;*/
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.img-somos{
+    max-width: 30vh;
+}
+
+.text-somos{
+    padding: 0 2%;
+}
+
+.mision-vision{
+    max-height: 1400px;
+}
+
+.mision, .vision{
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+}
+
+.img-mision{
+    width: 420px;
+    float: left;
+    margin: 20px;
+    display: inline;
+}
+
+.img-vision{
+    width: 420px;
+    float: right;
+    margin: 20px;
+    display: inline;
+}
+
+/*p*/
+
+.img-mbp, .img-expreso, .img-leo, .img-neuro{
+    display: block;
+    margin: 0 auto;
+    max-width: 30vh;
+}
+
+.pro-mbp, .pro-leo, .pro-expreso, .pro-neuro{
+    max-width: 40vh;
+    margin: 0 auto;
+}
+
+.logo-mbp, .text-mbp, .logo-leo, .text-leo, .logo-expreso, .text-expreso, .logo-neuro, .text-neuro{
+    display: inline-block;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+
+.b-masinf{
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    padding: 4px;
+    max-width: 60%;
+    min-width: 180px;
+    background-color: #E25F9B;
+    border-radius: 15px;
+    color: white;
+}
+
+
+/*c*/
+
+.ventas-w{
+    width: 30px;
+}
+
+.ventas, .servicio, .correo{
+    display: block;
+    margin: 40px auto;
+    width: 250px;
+}
+
+footer{
+    align-items: center;
+    min-width: 20vh;
+    background-color: #0AAFE5;
+}
+
+.footer-content{
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-content a {
+    color: #000; /* Color de los iconos */
+    font-size: 24px; /* Tamaño de los iconos */
+    margin: 0 10px; /* Espacio entre los iconos */
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .header{
+        height: 30vh;
+    }
+
+    .logo-mbp, .text-mbp, .logo-leo, .text-leo, .logo-expreso, .text-expreso, .logo-neuro, .text-neuro{
+        min-width: 90%;
+    }
+
+    .pro-mbp, .pro-leo, .pro-expreso, .pro-neuro, .img-mbp, .img-expreso, .img-leo, .img-neuro{
+        display: block;
+    }
+
+    .mbp, .leo, .expreso, .neuro{
+        display: grid;
+    }
+}
+
+@media (width< 600px) {
+    .mision, .vision {
+            display:grid;
+        }
+}
+
+@media (width< 942px) {
+    .logo-mbp, .text-mbp, .logo-leo, .text-leo, .logo-expreso, .text-expreso, .logo-neuro, .text-neuro{
+        max-width: 50%;
+    }
+}
